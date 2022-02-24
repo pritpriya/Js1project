@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiReader</title>
+    <style>
+        #input1{
+            background-color: lightgreen;
+        }
+        #input2{
+            background-color:lightblue;
+        }
+        #helpmessage{
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left:100px;
+        }
+        #helpbutton{
+            border-radius:5px;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="helpmessage">
+        <!--help-->
+        hi i will help you
+    </div>
+    <button onclick="help()" onmouseover="Showhelp()" onmouseleave="Hidehelp()" id="helpbutton">Help</button><br>
+
+    <div id="quoteDisplay">
+        <!--Quotes will display here-->
+    </div>
+    <button onclick="newQuote()">Button</button><br>
+    <input type="text"
+    onchange="onTextChange(this.value);" id="input1"/>
+    <input type="text" id="input2"/>
+    <form>
+        <b>List of 1992 cricket world cup semifinal participant using dropdown list</b><br>
+        <select id="myList" onchange = "dropDownlist1992()">
+           <option>Dropdown components</option>
+           <option>England</option>
+           <option>Pakistan</option>
+        </select>
+    </form>
+    <script src="javascript.js"></script>
+    
+</body>
+</html>
